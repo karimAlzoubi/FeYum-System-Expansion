@@ -1,0 +1,237 @@
+/* 
+  General Page Styles
+  -------------------------------------------------
+  Purpose: 
+    - Basic page setup with background color, text direction (RTL), and font.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font */
+    background-color: #ffffff;
+    /* Light background color */
+    direction: rtl;
+    /* Right to left text direction */
+}
+
+
+/* 
+  Container Styling
+  -------------------------------------------------
+  Purpose:
+    - Flexbox to center the content both horizontally and vertically on the screen.
+*/
+
+.container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 100vh;
+    /* Full viewport height */
+    }
+
+/* 
+  Card Styling
+  -------------------------------------------------
+  Purpose:
+    - A white card with a shadow, padding, and specific dimensions.
+*/
+
+/* تحسين تصميم البطاقة الرئيسية */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 900px; /* تم زيادة العرض من 500px إلى 700px */
+    max-width: 95%;
+    margin: 20px auto;
+}
+
+/* 
+  Logo Styling
+  -------------------------------------------------
+  Purpose:
+    - Centers and adjusts the size of the logo at the top of the card.
+*/
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    /* Defines logo width */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+/* 
+  Heading Styling
+  -------------------------------------------------
+  Purpose:
+    - Centers the heading and applies appropriate margin, size, and color.
+*/
+
+/* تحسين تصميم العنوان */
+h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 25px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #B10000;
+    display: inline-block;
+}
+
+/* تحسين تصميم الزر */
+.buttons button {
+    background-color: #B10000;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(177, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+    background-color: #900000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(177, 0, 0, 0.3);
+}
+
+/* تحسين تصميم الشعار */
+.card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/* 
+  Field Styling
+  -------------------------------------------------
+  Purpose:
+    - Styling for the input fields, including label and field value.
+*/
+
+/* تحسين تصميم الحقول */
+.field {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.field label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.field .value {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    color: #495057;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.field .value:hover {
+    background-color: #fff;
+    border-color: #B10000;
+    box-shadow: 0 0 0 3px rgba(177, 0, 0, 0.1);
+}
+
+/* 
+  Button Styling
+  -------------------------------------------------
+  Purpose:
+    - Centers the button below the form and adds hover effects.
+*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    /* Centers the button */
+    margin-top: 20px;
+    /* Space above the button */
+}
+
+.buttons button {
+    background-color: #B10000;
+    /* Red background color */
+    color: white;
+    /* White text */
+    border: none;
+    padding: 10px 20px;
+    /* Padding for the button */
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Font size for the button text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+}
+
+.buttons button:hover {
+    background-color: #b30000;
+}
+
+/*Responsive Design for Smaller Screens
+  -------------------------------------------------
+  Purpose:
+    - Adjusts the layout and styling for smaller screens (max-width: 768px).
+*/
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .field {
+        width: 100%; /* في الشاشات الصغيرة، كل حقل يأخذ سطراً كاملاً */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust card width even more for very small screens */
+    .card {
+        width: 100%;
+        /* Full width on very small screens */
+        padding: 10px;
+    }
+
+    /* Further reduce heading size */
+    h3 {
+        font-size: 14px;
+        /* Even smaller heading font */
+    }
+
+    /* Reduce input field padding and font size for tiny screens */
+    .field .value {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Adjust button size further */
+    .buttons button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

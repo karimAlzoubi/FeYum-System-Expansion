@@ -1,0 +1,445 @@
+/* 
+  Basic Page Settings
+  -------------------------------------------------
+  Purpose:
+    - Sets the margin, font family, background color, and text direction for the page.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font */
+    background-color: #F0F2F7;
+    /* Light background color */
+    direction: rtl;
+    /* Right-to-left text alignment */
+}
+
+/* 
+  Main Container
+  -------------------------------------------------
+  Purpose:
+    - Centers the container with a maximum width of 1200px and adds padding inside.
+*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Centers content with auto margin and gives padding */
+}
+
+/* 
+  Header Styling
+  -------------------------------------------------
+  Purpose:
+    - Flexbox layout for the header to align items horizontally and space them apart.
+*/
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Aligns header items horizontally */
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    /* Dark text for main heading */
+}
+
+header h3 {
+    font-size: 16px;
+    color: #666;
+    /* Lighter text for subheading */
+}
+
+/* 
+  Action Buttons Styling
+  -------------------------------------------------
+  Purpose:
+    - Styles for action buttons with circular shapes, a hover effect, and smooth transitions.
+*/
+
+.action-buttons button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #B10000;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adds smooth transitions for scaling and shadow */
+}
+
+.action-buttons button:hover {
+    background-color: #B10000;
+    transform: scale(1.1);
+    /* Hover effect with scaling */
+}
+
+.action-buttons i {
+    font-size: 20px;
+    /* Icon size */
+}
+
+.action-buttons {
+    order: 2;
+    /* Places the action buttons on the right */
+}
+
+.text-end {
+    order: 1;
+    /* Places text on the left */
+    text-align: left;
+    /* Aligns text to the left */
+}
+
+/* 
+  Employee Cards Layout
+  -------------------------------------------------
+  Purpose:
+    - Grid layout for employee cards with vertical scrolling and custom scrollbar styles.
+*/
+
+.employees {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for employee cards */
+    gap: 20px;
+    justify-content: end;
+    /* Aligns all cards to the right */
+}
+
+.employees {
+    max-height: 500px;
+    /* Limits height of the employee section */
+   
+}
+/* 
+  Job Card Styling
+  -------------------------------------------------
+  Purpose:
+    - Flexbox layout for each job card with a hover effect, box shadow, and text alignment.
+*/
+
+.job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adds shadow and scaling on hover */
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Hover effect with translation and stronger shadow */
+}
+
+.job-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    /* Round profile picture */
+}
+
+.job-card .info {
+    flex: 1;
+    margin-right: 15px;
+    text-align: right;
+    /* Aligns job info text to the right */
+}
+
+.job-card h3 {
+    font-size: 18px;
+    color: #333;
+    /* Dark color for job title */
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #666;
+    /* Light gray color for job description */
+}
+
+/* 
+  Details Button Styling
+  -------------------------------------------------
+  Purpose:
+    - Styles for the "Details" button with a hover effect.
+*/
+
+.details-btn {
+    background-color: #B10000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+}
+
+.details-btn:hover {
+    background-color: #d00;
+    /* Darker red on hover */
+}
+
+/* 
+  Back Button Styling
+  -------------------------------------------------
+  Purpose:
+    - Fixed positioning for the back button at the bottom left or right of the page with hover effect.
+*/
+
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #B10000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Position fixed at bottom-left and smooth hover effect */
+}
+
+.back-btn:hover {
+    background-color: #B10000;
+    /* Maintains the red color on hover */
+}
+
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Moves the back button to the right */
+    left: auto;
+    /* Removes left positioning */
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.action-buttons button {
+    background-color: #B10000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-buttons button i {
+    color: #fff !important;
+    /* Ensure icon is white */
+}
+
+.action-buttons button:hover {
+    background-color: #B10000;
+    /* Red color on hover */
+}
+
+.action-buttons button:hover i {
+    color: #fff !important;
+    /* Ensure icon remains white on hover */
+}
+
+
+/* 
+  Footer Logo Styling
+  -------------------------------------------------
+  Purpose:
+    - Fixed positioning for the footer logo at the bottom left or right corner.
+*/
+
+.footer-logo {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    /* Places the logo at the bottom left */
+    right: auto;
+    /* Removes right positioning */
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* Circular logo */
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h3 {
+        font-size: 14px;
+    }
+
+    .action-buttons button {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
+
+    .employees {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .job-card {
+        padding: 12px;
+    }
+
+    .job-card h3 {
+        font-size: 16px;
+    }
+
+    .job-card p {
+        font-size: 12px;
+    }
+
+    .details-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .back-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header h3 {
+        font-size: 12px;
+    }
+
+    .employees {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .job-card {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .job-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .job-card h3 {
+        font-size: 14px;
+    }
+
+    .job-card p {
+        font-size: 12px;
+    }
+
+    .details-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .back-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .footer-logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .action-buttons button {
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    header h3 {
+        font-size: 10px;
+    }
+
+    .employees {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .job-card {
+        padding: 8px;
+    }
+
+    .job-card h3 {
+        font-size: 12px;
+    }
+
+    .job-card p {
+        font-size: 10px;
+    }
+
+    .details-btn {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .back-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}

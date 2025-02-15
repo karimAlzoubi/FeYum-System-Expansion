@@ -1,0 +1,439 @@
+/* 
+  style Communication request.css
+  -------------------------------------------------
+  Purpose:
+    - Global styling for Communication request.html (no frameworks)
+    - Includes responsive layout with media queries for mobile-friendliness
+    - Styles the sidebar, menu, cards, buttons, and form fields
+
+  Key Highlights:
+    - RTL (Right to Left) layout to support Arabic content (direction: rtl)
+    - .sidebar is fixed on large screens for easy navigation
+    - .fields-grid uses CSS Grid to create a 2-column layout for forms
+    - Media queries (@media) ensure the layout is responsive on devices with max width 992px
+*/
+
+/* General Reset and Font Setup */
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font */
+    background-color: #f5f5f5;
+    /* Light background color for content area */
+    direction: rtl;
+    /* Right-to-left text alignment */
+}
+
+.container {
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+    /* For demonstration - remove if undesired */
+}
+
+/* ======== Sidebar ======== */
+/* 
+  The sidebar is fixed to the right side on large screens and contains the logo and a dropdown menu.
+*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    /* Fixed width for sidebar */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #fff;
+    /* White background for sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the sidebar */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Circular logo */
+    display: block;
+    margin: 0 auto 15px;
+    /* Center logo with margin */
+}
+
+/* Sidebar menu styling */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    /* Rounded corners for menu items */
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition on hover */
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #eee;
+    /* Light gray on hover */
+}
+
+.menu-item.active {
+    background-color: #B10000;
+    /* Active menu item in red */
+    color: #fff;
+    /* White text for active item */
+}
+
+/* ======== Main Content ======== */
+/* Flex container for content, providing layout flexibility */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-right: 220px;
+    /* Offset by sidebar width + additional space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: flex-start;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+header p {
+    margin: 0;
+    color: #666;
+}
+
+/* ======== Messages Section ======== */
+/* Flex container for message cards with wrap and gap */
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Gap between message cards */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.messages h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: right;
+    /* Align title to the right */
+    border-bottom: 2px solid #B10000;
+    /* Red underline */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* Styling for individual message cards */
+.message-card {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Reverse order of icon and text */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for cards */
+    font-size: 10px;
+    width: 38%;
+    /* Responsive width for the message cards */
+    margin: 0.5% 0;
+    /* Small margin between cards */
+    direction: rtl;
+    /* Right-to-left text alignment */
+    gap: 10px;
+    /* Space between icon and text */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover effects */
+}
+
+.message-card:hover {
+    transform: translateY(-3px);
+    /* Slightly lift card on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.message-card .icon {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 8px;
+    order: -1;
+    /* Move icon to the start of the message card */
+}
+
+.message-card .info h4 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.message-card .info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 12px;
+}
+
+/* ======== Button Styling ======== */
+/* Detailed button styling */
+.details-btn {
+    background-color: #B10000;
+    /* Red background */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+    font-size: 10px;
+}
+
+.details-btn:hover {
+    background-color: #B10000;
+    /* Maintain red on hover */
+}
+
+/* ======== Dropdown Menu ======== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #B10000;
+    /* Red background */
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: #B10000;
+    /* Red background on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Shadow for dropdown */
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #B10000;
+    color: white;
+}
+
+.dropdown-content a.active {
+    background-color: #B10000;
+    /* Highlight active link */
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Show dropdown content on hover */
+}
+
+/* ======== Action Buttons ======== */
+/* Buttons for performing actions, with hover and shadow effects */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.action-buttons button {
+    background-color: #B10000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-buttons button i {
+    color: #fff !important;
+    /* Ensure icon is white */
+}
+
+.action-buttons button:hover {
+    background-color: #B10000;
+    /* Red color on hover */
+}
+
+.action-buttons button:hover i {
+    color: #fff !important;
+    /* Ensure icon remains white on hover */
+}
+
+
+/* ======== Responsive Design ======== */
+
+/* For Tablets and Smaller Screens (max-width: 992px) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .content {
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .messages {
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .message-card {
+        width: 48%;
+        margin: 1% 0;
+    }
+
+    .details-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .action-buttons button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .messages {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .message-card {
+        width: 100%;
+        margin: 1% 0;
+    }
+
+    .details-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .action-buttons button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* For Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .message-card {
+        font-size: 8px;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    .action-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+}

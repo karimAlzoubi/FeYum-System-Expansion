@@ -1,0 +1,396 @@
+/* 
+  Basic Page Settings
+  -------------------------------------------------
+  Purpose:
+    - Sets global styles for the body like margin, font family, background color, and text direction.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font */
+    background-color: #ffffff;
+    /* Light background color */
+    direction: rtl;
+    /* Right-to-left text alignment */
+}
+
+/* 
+  Main Container Layout
+  -------------------------------------------------
+  Purpose:
+    - Flexbox is used to create a layout that will fill the screen.
+    - Ensures the container spans the entire height of the viewport.
+*/
+
+.container {
+    background-color: #ffffff;
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+/* 
+  Sidebar Styles
+  -------------------------------------------------
+  Purpose:
+    - Fixes the sidebar to the right side of the page and makes it occupy the full height.
+    - Adds a subtle shadow for separation from the main content.
+*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 240px;
+    /* Sidebar width */
+    height: 100vh;
+    /* Full height */
+    background-color: #fff;
+    /* White background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Shadow effect on the left side */
+}
+
+/* 
+  Logo Styling
+  -------------------------------------------------
+  Purpose:
+    - Centers the logo and gives it a circular shape.
+*/
+
+.logo img {
+    width: 70px;
+    /* Logo width */
+    height: 70px;
+    /* Logo height */
+    border-radius: 50%;
+    /* Circular logo */
+    display: block;
+    margin: 20px auto;
+    /* Centers the logo with top and bottom margin */
+}
+
+/* 
+  Main Content Area
+  -------------------------------------------------
+  Purpose:
+    - Flexbox layout for the main content area, ensuring the sidebar doesn’t overlap.
+    - Centers the content both vertically and horizontally.
+*/
+
+.content {
+    background-color: #ffffff;
+    flex: 1;
+    /* Fills the remaining space beside the sidebar */
+    padding: 20px;
+    margin-right: 260px;
+    margin-top: 70px;
+    /* Space for sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: flex-start;
+    /* Aligns content to the top */
+}
+
+/* 
+  Dropdown Menu Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles for the dropdown button and its content, including hover effects.
+*/
+
+.dropdown {
+    
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #B10000;
+    /* Red background */
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.dropdown-btn:hover {
+    background-color: #B10000;
+    /* Darkens the button color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adds shadow under the dropdown */
+    z-index: 1;
+    border-radius: 15px;
+    /* Rounded corners for dropdown content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.dropdown-content a:hover {
+    background-color: #B10000;
+    color: white;
+    /* White text on hover */
+}
+
+.dropdown-content a.active {
+    background-color: #B10000;
+    color: white;
+    /* Active link styling */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Shows dropdown content on hover */
+}
+
+/* 
+  Sidebar Menu List Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles for the sidebar menu items, including hover effects and active state.
+*/
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /* Light background for menu items */
+    text-align: center;
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #eee;
+    /* Light hover effect */
+}
+
+.menu-item.active {
+    background-color: #B10000;
+    /* Active state background color */
+    color: #fff;
+    /* White text for active item */
+}
+
+/* 
+  Welcome Card Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles for the welcome card, with text alignment, shadow, and a background image.
+*/
+
+.welcome-card {
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.welcome-card h2 {
+    font-size: 35px;
+    margin: 0 0 10px;
+    color: #b10000;
+    /* Dark text for the title */
+}
+
+.welcome-card p {
+    font-size: 25px;
+    color: #666;
+    /* Light gray color for description */
+}
+
+.welcome-card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    /* Subtle opacity for the background image */
+    width: 300px;
+    height: auto;
+}
+
+/* 
+  Cards Layout
+  -------------------------------------------------
+  Purpose:
+    - Grid layout for cards to display information in a responsive manner.
+*/
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns in the grid */
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* 
+  Individual Card Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles for the individual cards, including layout, shadow, and icon positioning.
+*/
+
+.card {
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #B10000;
+    /* Red color for the title */
+}
+
+.card p {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+    /* Dark color for description text */
+}
+
+.card .icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: #000000;
+    /* Light icon color */
+}
+
+
+/* 
+  Responsive Design for Smaller Screens
+  -------------------------------------------------
+  Purpose:
+    - Adjusts the layout for mobile and tablet screens.
+*/
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 200px;
+        /* Reduce sidebar width */
+    }
+
+    .content {
+        margin-right: 220px;
+        padding: 15px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        /* Full width for sidebar on small screens */
+        position: relative;
+        height: auto;
+        box-shadow: none;
+        /* Remove sidebar shadow on small screens */
+    }
+
+    .content {
+        margin-right: 0;
+        padding: 15px;
+        width: 100%;
+        /* Full width for content */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        /* Single column for cards */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .welcome-card {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .menu-item {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 28px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-card {
+        padding: 15px;
+        max-width: 100%;
+    }
+}

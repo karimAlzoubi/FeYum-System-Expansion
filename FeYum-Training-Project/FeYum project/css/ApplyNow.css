@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+  /* Set the font family to 'Tajawal' with a fallback to sans-serif */
+  font-family: 'Tajawal', sans-serif;
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Set a light gray background color */
+  background-color: #ddd;
+  /* Use Flexbox to center content horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set the height to full viewport height */
+  height: 100vh;
+  /* Set text direction to right-to-left */
+  direction: rtl;
+}
+
+.main-content {
+  /* Set a slightly lighter background color for the main content */
+  background-color: #f0f0f0;
+  /* Rounded corners with a radius of 20px */
+  border-radius: 20px;
+  /* Padding inside the container */
+  padding: 30px;
+  /* Set the width to 80% of the parent */
+  width: 80%;
+  /* Add a subtle box shadow for depth */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Position relative to allow absolute positioning of child elements */
+  position: relative;
+}
+
+header h1 {
+  /* Center-align the header text */
+  text-align: center;
+  /* Space below the header */
+  margin-bottom: 20px;
+  /* Set font size */
+  font-size: 24px;
+}
+
+.job-form {
+  /* Use CSS Grid for form layout with two equal columns */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Gap between grid items */
+  gap: 15px;
+}
+
+.form-group {
+  /* Arrange form elements in a vertical column */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  /* Padding inside input fields */
+  padding: 8px;
+  /* Set font size for input text */
+  font-size: 14px;
+  /* Light gray border */
+  border: 1px solid #ddd;
+  /* Rounded corners for inputs */
+  border-radius: 5px;
+}
+
+.submit-btn {
+  /* Span the button across both grid columns */
+  grid-column: span 2;
+  /* Padding inside the button */
+  padding: 10px;
+  /* Set button background color */
+  background-color: #B10000;
+  /* White text color */
+  color: #fff;
+  /* Remove default border */
+  border: none;
+  /* Rounded corners for the button */
+  border-radius: 5px;
+  /* Increase font size */
+  font-size: 16px;
+  /* Pointer cursor on hover */
+  cursor: pointer;
+  /* Center the button text */
+  text-align: center;
+}
+
+.submit-btn:hover {
+  /* Darken the button color on hover */
+  background-color: #b71c1c;
+}
+
+.cv-upload {
+  /* Align items vertically center and add space between them */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-upload input {
+  /* Allow the input to take up remaining space */
+  flex: 1;
+}
+
+.cv-upload a {
+  /* Padding inside the upload link */
+  padding: 6px 12px;
+  /* Set background color */
+  background-color: #B10000;
+  /* White text color */
+  color: white;
+  /* Remove underline from link */
+  text-decoration: none;
+  /* Rounded corners for the link */
+  border-radius: 5px;
+  /* Set font size */
+  font-size: 14px;
+}
+
+.close-btn {
+  /* Position the close button at the top-left corner */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* Set background color */
+  background: #B10000;
+  /* White text color */
+  color: white;
+  /* Remove default border */
+  border: none;
+  /* Make the button circular */
+  border-radius: 50%;
+  /* Set width and height */
+  width: 30px;
+  height: 30px;
+  /* Increase font size for the close icon */
+  font-size: 18px;
+  /* Pointer cursor on hover */
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .main-content {
+      /* Increase width to 90% */
+      width: 90%;
+      /* Reduce padding */
+      padding: 20px;
+  }
+
+  .job-form {
+      /* Change grid to single column */
+      grid-template-columns: 1fr;
+      /* Reduce gap between form elements */
+      gap: 10px;
+  }
+
+  .submit-btn {
+      /* Decrease font size */
+      font-size: 14px;
+      /* Reduce padding */
+      padding: 8px;
+  }
+
+  .cv-upload a {
+      /* Decrease font size */
+      font-size: 12px;
+      /* Reduce padding */
+      padding: 6px 10px;
+  }
+}
+
+/* Mobile Landscape and below */
+@media (max-width: 768px) {
+  body {
+      /* Allow the body height to adjust based on content */
+      height: auto;
+      /* Add padding around the body */
+      padding: 20px;
+  }
+
+  .main-content {
+      /* Make the main content take full width */
+      width: 100%;
+      /* Further reduce padding */
+      padding: 15px;
+  }
+
+  header h1 {
+      /* Decrease header font size */
+      font-size: 20px;
+  }
+
+  .form-group input {
+      /* Decrease input font size */
+      font-size: 12px;
+      /* Reduce input padding */
+      padding: 6px;
+  }
+
+  .submit-btn {
+      /* Further decrease button font size */
+      font-size: 12px;
+      /* Reduce button padding */
+      padding: 6px 8px;
+  }
+}
+
+/* Mobile Portrait and below */
+@media (max-width: 480px) {
+  header h1 {
+      /* Further decrease header font size */
+      font-size: 18px;
+  }
+
+  .form-group input {
+      /* Decrease input font size */
+      font-size: 10px;
+      /* Reduce input padding */
+      padding: 5px;
+  }
+
+  .submit-btn {
+      /* Further decrease button font size */
+      font-size: 10px;
+      /* Reduce button padding */
+      padding: 5px;
+  }
+
+  .cv-upload a {
+      /* Decrease upload link font size */
+      font-size: 10px;
+      /* Reduce padding */
+      padding: 5px;
+  }
+}

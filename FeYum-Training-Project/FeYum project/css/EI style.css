@@ -1,0 +1,433 @@
+/* 
+  Basic Page Settings
+  -------------------------------------------------
+  Purpose:
+    - Sets global styles for the body like margin, font family, background color, and text direction.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font for the page */
+    background-color: #F0F2F7;
+    /* Light background color */
+    direction: rtl;
+    /* Right-to-left text alignment */
+}
+
+/* 
+  Main Container Layout
+  -------------------------------------------------
+  Purpose:
+    - Flexbox is used to create a layout that will fill the screen.
+    - Ensures the container spans the entire height of the viewport.
+*/
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+/* 
+  Sidebar Styles
+  -------------------------------------------------
+  Purpose:
+    - Fixes the sidebar to the right side of the page and makes it occupy the full height.
+    - Adds a subtle shadow for separation from the main content.
+*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    /* Fixed width for the sidebar */
+    height: 100vh;
+    /* Full height for the sidebar */
+    background-color: #fff;
+    /* White background for the sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow on the left side of the sidebar */
+}
+
+/* 
+  Logo Styling
+  -------------------------------------------------
+  Purpose:
+    - Centers the logo and gives it a circular shape.
+*/
+
+.logo img {
+    width: 50px;
+    /* Size of the logo */
+    height: 50px;
+    border-radius: 50%;
+    /* Circular logo */
+    display: block;
+    margin: 0 auto 15px;
+    /* Centers the logo and adds space below */
+}
+
+/* 
+  Sidebar Menu List Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles for the menu, including spacing and hover effects.
+*/
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /* Light background for menu items */
+    text-align: center;
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    font-size: 14px;
+    /* Font size for menu items */
+}
+
+.menu-item:hover {
+    background-color: #eee;
+    /* Light hover effect */
+}
+
+.menu-item.active {
+    background-color: #B10000;
+    /* Active state background color */
+    color: #fff;
+    /* White text for active item */
+}
+
+/* 
+  Main Content Area
+  -------------------------------------------------
+  Purpose:
+    - Flexbox layout for the main content area, ensuring the sidebar doesn’t overlap.
+    - Centers the content both vertically and horizontally.
+*/
+
+.content {
+    flex: 1;
+    /* Fills the remaining space beside the sidebar */
+    padding: 20px;
+    margin-right: 220px;
+    /* Space for the sidebar + additional gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: flex-start;
+    /* Aligns content to the top */
+}
+
+/* 
+  Header Styles
+  -------------------------------------------------
+  Purpose:
+    - Flexbox for header layout, ensuring the title and subtitle align correctly.
+    - Text centered within the header.
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Space between title and subtitle */
+    align-items: center;
+    text-align: center;
+    /* Centers the text within the header */
+    width: 100%;
+    margin-bottom: 15px;
+    /* Space below the header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    /* Font size for header */
+}
+
+header p {
+    margin: 0;
+    color: #666;
+    /* Light gray color for the subtitle */
+}
+
+/* 
+  Messages Section
+  -------------------------------------------------
+  Purpose:
+    - Layout for the message cards, using flexbox to wrap and space the messages evenly.
+*/
+
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Gap between message cards */
+    max-width: 700px;
+    /* Limiting the width */
+    margin: 0 auto;
+    /* Centers the messages */
+}
+
+.messages h3 {
+    font-size: 18px;
+    /* Title size for the messages section */
+    font-weight: bold;
+    color: #333;
+    /* Dark text color */
+    margin: 20px 0 10px;
+    /* Spacing around the title */
+    text-align: right;
+    /* Aligns the title to the right */
+    border-bottom: 2px solid #B10000;
+    /* Bottom border for the title */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* 
+  Message Card Styles
+  -------------------------------------------------
+  Purpose:
+    - Styles the individual message cards, including flex layout, hover effects, and shadow.
+    - Ensures the content stays in right-to-left direction.
+*/
+
+.message-card {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Reverses the order of icon and text for RTL layout */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    /* White background for message cards */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    font-size: 10px;
+    width: 38%;
+    /* Fixed width for each card */
+    margin: 0.5% 0;
+    /* Small gap between cards */
+    direction: rtl;
+    /* Ensures right-to-left text alignment */
+    gap: 10px;
+    /* Gap between icon and text */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover effects */
+}
+
+.message-card:hover {
+    transform: translateY(-3px);
+    /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
+}
+
+/* 
+  Message Card Icon Styling
+  -------------------------------------------------
+  Purpose:
+    - Positions the icon at the beginning of the card and styles it.
+*/
+
+.message-card .icon {
+    font-size: 12px;
+    /* Icon size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    margin-left: 8px;
+    /* Space between icon and text */
+    order: -1;
+    /* Positions the icon at the start */
+}
+
+/* 
+  Message Card Info Styling
+  -------------------------------------------------
+  Purpose:
+    - Styles the title and description within each message card.
+*/
+
+.message-card .info h4 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.message-card .info p {
+    margin: 5px 0 0;
+    color: #666;
+    /* Light gray color for description */
+    font-size: 12px;
+    /* Font size for description text */
+}
+
+/* 
+  Details Button Styling
+  -------------------------------------------------
+  Purpose:
+    - Adds a red background and white text with a hover effect for the button.
+*/
+
+.details-btn {
+    background-color: #B10000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+    font-size: 10px;
+}
+
+.details-btn:hover {
+    background-color: #B10000;
+    /* Hover effect for the button */
+}
+
+/* 
+  Dropdown Menu Styling
+  -------------------------------------------------
+  Purpose:
+    - Styles for the dropdown button and its content, including hover effects.
+*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #B10000;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: #B10000;
+    /* Darkens the button color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adds shadow under the dropdown */
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.dropdown-content a:hover {
+    background-color: #B10000;
+    color: white;
+    /* White text on hover */
+}
+
+.dropdown-content a.active {
+    background-color: #B10000;
+    color: white;
+    /* Active link styling */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Show dropdown content on hover */
+}
+
+/* 
+  Action Buttons Styling
+  -------------------------------------------------
+  Purpose:
+    - Defines the layout and hover effects for the action buttons.
+*/
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.action-buttons button {
+    background-color: #B10000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects */
+}
+
+.action-buttons button i {
+    color: #fff !important;
+    /* Ensures icons are white */
+}
+
+.action-buttons button:hover {
+    background-color: #B10000;
+    /* Darker red on hover */
+}
+
+.action-buttons button:hover i {
+    color: #fff !important;
+    /* Keep icons white on hover */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100px; /* Narrower sidebar */
+    }
+    .content {
+        margin-right: 120px; /* Adjust content margin for smaller sidebar */
+        padding: 10px;
+    }
+    .menu-item {
+        font-size: 12px; /* Smaller font size for menu items */
+    }
+    .details-btn, .dropdown-btn {
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 5px 10px;
+    }
+    .message-card {
+        width: 48%; 
+    }/* Adjust*/
+}

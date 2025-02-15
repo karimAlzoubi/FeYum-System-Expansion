@@ -1,0 +1,247 @@
+/* ========================================================
+   General Page Settings
+   --------------------------------------------------------
+   Purpose:
+   - Sets margin, font, background color, display properties, and text direction for RTL layout.
+======================================================== */
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic font for a modern and readable design */
+    background-color: #F0F2F7;
+    /* Light background color for a soft appearance */
+    display: flex;
+    /* Flexbox for centering the content */
+    justify-content: center;
+    /* Centers the content horizontally */
+    align-items: center;
+    /* Centers the content vertically */
+    height: 100vh;
+    /* Full viewport height for a centered container */
+    direction: rtl;
+    /* Right-to-left text direction for Arabic layout */
+}
+
+/* ========================================================
+   Main Container Styling
+   --------------------------------------------------------
+   Purpose:
+   - Centers content in the viewport with padding, border-radius, and a subtle shadow.
+   - Defines a fixed width for the container.
+======================================================== */
+
+.container {
+    text-align: center;
+    /* Centers text inside the container */
+    background-color: #fff;
+    /* White background for the main container */
+    padding: 20px;
+    /* Adds space inside the container */
+    border-radius: 10px;
+    /* Rounded corners for a soft look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    width: 400px;
+    /* Fixed width to ensure consistency */
+}
+
+/* ========================================================
+   Logo Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the logo with a fixed size and adds space below it for separation from the form.
+======================================================== */
+
+.logo img {
+    width: 50px;
+    /* Fixed width for logo */
+    height: 50px;
+    /* Fixed height for logo */
+    margin-bottom: 20px;
+    /* Adds space below the logo */
+}
+
+/* ========================================================
+   Form Container and Input Fields Styling
+   --------------------------------------------------------
+   Purpose:
+   - Provides styling for the form, including the labels, inputs, and spacing.
+======================================================== */
+
+.form-container {
+    margin-bottom: 20px;
+    /* Adds space between form fields */
+    text-align: right;
+    /* Right-aligns the form content */
+}
+
+.form-container label {
+    font-size: 16px;
+    /* Sets font size for the label */
+    margin-bottom: 8px;
+    /* Adds margin below the label */
+    display: block;
+    /* Makes label a block element */
+    font-weight: bold;
+    /* Makes label text bold for emphasis */
+}
+
+/* ========================================================
+   Input Field Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the input fields with padding, border, and font size.
+   - Ensures consistent width and spacing for a clean layout.
+======================================================== */
+
+.form-container input {
+    width: 350px;
+    /* Fixed width for input fields */
+    padding: 10px;
+    /* Adds padding for better text input space */
+    border: 1px solid #ddd;
+    /* Light border color */
+    border-radius: 5px;
+    /* Rounded corners for inputs */
+    font-size: 14px;
+    /* Smaller font size for input text */
+    margin-top: 5px;
+    /* Adds space above the input fields */
+}
+
+/* ========================================================
+   Buttons Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles buttons for consistent appearance and interactive hover effect.
+   - Uses flexbox to evenly distribute button spacing.
+======================================================== */
+
+.buttons {
+    display: flex;
+    /* Flexbox layout to distribute buttons evenly */
+    justify-content: space-between;
+    /* Space between buttons */
+}
+
+.buttons button {
+    background-color: #B10000;
+    /* Red background color for buttons */
+    color: white;
+    /* White text color for contrast */
+    border: none;
+    /* No border around the button */
+    padding: 10px 20px;
+    /* Button padding for better click area */
+    border-radius: 5px;
+    /* Rounded corners for buttons */
+    cursor: pointer;
+    /* Pointer cursor on hover for interactivity */
+    font-size: 16px;
+    /* Font size for button text */
+    transition: background-color 0.3s;
+    /* Smooth transition on hover */
+}
+
+/* ========================================================
+   Button Hover Effect
+   --------------------------------------------------------
+   Purpose:
+   - Changes button background color on hover for better interactivity.
+======================================================== */
+
+.buttons button:hover {
+    background-color: #B10000;
+    /* Keeps the background color the same on hover */
+}
+
+
+/* ========================================================
+   Responsive Design
+   --------------------------------------------------------
+   Purpose:
+   - Adjusts the layout and sizing for smaller devices (tablets, mobiles).
+======================================================== */
+
+/* Tablets (from 768px to 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-container input {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buttons button {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* Mobile Devices (from 480px to 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .form-container input {
+        width: 100%;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+/* Small Mobile Devices (less than 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 12px;
+    }
+
+    .form-container input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .buttons button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

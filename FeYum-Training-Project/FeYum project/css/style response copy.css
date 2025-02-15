@@ -1,0 +1,467 @@
+/* ========================================================
+   Basic Page Settings
+   --------------------------------------------------------
+   Purpose:
+   - Defines the basic styling for the body, font, background color, and text direction.
+======================================================== */
+
+body {
+    margin: 0;
+    /* Removes default margin */
+    font-family: 'Tajawal', sans-serif;
+    /* Uses Tajawal font for Arabic text */
+    background-color: #F0F2F7;
+    /* Light background color */
+    direction: rtl;
+    /* Sets the text direction to right-to-left */
+}
+
+/* ========================================================
+   Main Container
+   --------------------------------------------------------
+   Purpose:
+   - Ensures full-page layout with flexbox, and hides overflow.
+======================================================== */
+
+.container {
+    display: flex;
+    /* Flexbox layout for easy content arrangement */
+    height: 100vh;
+    /* Makes the container fill the full viewport height */
+    overflow: hidden;
+    /* Prevents overflow (no scrolling) */
+}
+
+/* ========================================================
+   Sidebar Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the fixed sidebar with width, height, and shadow.
+======================================================== */
+
+.sidebar {
+    position: fixed;
+    /* Fixes the sidebar to the side */
+    top: 0;
+    /* Positions it at the top */
+    right: 0;
+    /* Positions it on the right */
+    width: 190px;
+    /* Sets the sidebar width */
+    height: 100%;
+    /* Full height of the viewport */
+    background-color: #fff;
+    /* White background for the sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Shadow for separation */
+    padding: 20px 10px;
+    /* Padding inside the sidebar */
+}
+
+/* ========================================================
+   Dropdown Menu Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the dropdown button and its content with hover effects.
+======================================================== */
+
+.dropdown {
+    position: relative;
+    /* Positions the dropdown content relative to the button */
+    display: inline-block;
+    /* Ensures the dropdown button is inline */
+}
+
+.dropdown-btn {
+    background-color: #B10000;
+    /* Red background for the button */
+    color: white;
+    /* White text color */
+    padding: 8px 15px;
+    /* Padding inside the button */
+    font-size: 14px;
+    /* Button text size */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.dropdown-btn:hover {
+    background-color: #B10000;
+    /* Keeps the color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    /* Positions the dropdown content below the button */
+    background-color: #f9f9f9;
+    /* Light background for dropdown items */
+    min-width: 200px;
+    /* Minimum width for the dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Drop shadow */
+    z-index: 1;
+    /* Ensures dropdown appears above other content */
+    border-radius: 15px;
+    /* Rounded corners for dropdown items */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    /* Black text for links */
+    padding: 8px 12px;
+    /* Padding inside each item */
+    text-decoration: none;
+    /* Removes underline from links */
+    display: block;
+    /* Makes links block-level for full width */
+    border-radius: 5px;
+    /* Rounded corners for each item */
+    font-size: 14px;
+    /* Font size for links */
+    transition: all 0.3s;
+    /* Smooth transition on hover */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #B10000;
+    /* Red background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+.dropdown-content a.active {
+    background-color: #B10000;
+    /* Active item with red background */
+    color: white;
+    /* White text */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Shows the dropdown content when hovered */
+}
+
+/* ========================================================
+   Main Content Area
+   --------------------------------------------------------
+   Purpose:
+   - Defines the layout and alignment of the content area.
+======================================================== */
+
+.content {
+    flex: 1;
+    /* Takes remaining space after sidebar */
+    margin-right: 240px;
+    /* Leaves space for the sidebar */
+    padding: 20px;
+    /* Padding inside the content area */
+    display: flex;
+    /* Flexbox for content alignment */
+    flex-direction: column;
+    /* Aligns content vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: flex-start;
+    /* Aligns content at the top */
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* ========================================================
+   Page Header Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the header with a centered title and subtitle.
+======================================================== */
+
+header {
+    width: 100%;
+    /* Full width for the header */
+    text-align: center;
+    /* Centers the text */
+    margin-bottom: 20px;
+    /* Spacing below the header */
+}
+
+header h1 {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 36px;
+    /* Larger font size for the main title */
+    color: #333;
+    /* Dark text color */
+    font-family: 'Tajawal', sans-serif;
+}
+
+header h6 {
+    margin: 5px 0;
+    /* Margin above and below the subtitle */
+    color: #666;
+    /* Lighter text color for subtitle */
+    font-size: 16px;
+    /* Smaller font size for subtitle */
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* ========================================================
+   Card Styling
+   --------------------------------------------------------
+   Purpose:
+   - Defines the card layout with padding, shadow, and rounded corners.
+======================================================== */
+
+.card {
+    background-color: #fff;
+    /* White background for the card */
+    border-radius: 10px;
+    /* Rounded corners for the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    padding: 30px;
+    /* Padding inside the card */
+    width: 35%;
+    /* Card width */
+    text-align: right;
+    /* Right-aligns text for RTL layout */
+}
+
+/* ========================================================
+   Form Field Styling
+   --------------------------------------------------------
+   Purpose:
+   - Styles the fields inside the card for user input.
+======================================================== */
+
+.field {
+    margin-bottom: 15px;
+    /* Space below each field */
+}
+
+.field label {
+    font-weight: bold;
+    /* Bold font for labels */
+    font-size: 16px;
+    /* Font size for labels */
+    color: #333;
+    /* Dark text color for labels */
+    display: block;
+    /* Makes label a block-level element */
+    margin-bottom: 5px;
+    /* Margin below the label */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.field .value {
+    background-color: #f9f9f9;
+    /* Light background for value box */
+    border: 1px solid #ddd;
+    /* Light border for the value box */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside the value box */
+    font-size: 14px;
+    /* Font size for the value text */
+    color: #333;
+    /* Dark text color */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.field .value.file {
+    display: flex;
+    /* Flex layout for file input value */
+    align-items: center;
+    /* Aligns items in the file box */
+    justify-content: space-between;
+    /* Space between file name and icon */
+}
+
+.field .value.file i {
+    font-size: 16px;
+    /* Icon size */
+    color: #B10000;
+    /* Red color for icons */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.field input[type="text"],
+textarea {
+    width: 97%;
+    /* Full width for text input and textarea */
+    padding: var(--input-padding, 8px);
+    /* Adjustable padding for inputs */
+    border: 1px solid #ddd;
+    /* Light border for inputs */
+    border-radius: var(--field-border-radius, 5px);
+    /* Adjustable border radius */
+    font-size: var(--input-font-size, 14px);
+    /* Adjustable font size */
+    outline: none;
+    /* Removes outline on focus */
+}
+
+textarea {
+    resize: none;
+    /* Disables resizing for textareas */
+    height: var(--textarea-height, 80px);
+    /* Adjustable height for textareas */
+}
+
+/* ========================================================
+   Button Styling
+   --------------------------------------------------------
+   Purpose:
+   - Defines button styles including colors, padding, and hover effects.
+======================================================== */
+
+.buttons {
+    display: flex;
+    /* Flex layout for buttons */
+    justify-content: space-between;
+    /* Spaces buttons evenly */
+    gap: 10px;
+    /* Space between buttons */
+    margin-top: 20px;
+    /* Margin above the buttons */
+    width: 100%;
+    /* Full width for the buttons container */
+}
+
+.buttons button {
+    background-color: #B10000;
+    /* Red background for the buttons */
+    color: white;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding inside buttons */
+    border-radius: 8px;
+    /* Rounded corners for buttons */
+    font-size: 18px;
+    /* Font size for button text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    width: 120px;
+    /* Fixed width for buttons */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+    font-family: 'Tajawal', sans-serif;
+}
+
+.buttons button:hover {
+    background-color: #B10000;
+    /* Keeps background color on hover */
+}
+
+/* ========================================================
+   Responsive Design
+   ========================================================= */
+
+/* Tablet Screens (768px to 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .content {
+        margin-right: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile Screens (480px to 768px) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        box-shadow: none;
+        padding: 10px;
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .content {
+        margin-right: 0;
+        width: 100%;
+        padding: 15px;
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header h6 {
+        font-size: 14px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .field input[type="text"],
+    textarea {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile Screens (less than 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    header h6 {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .field input[type="text"],
+    textarea {
+        font-size: 12px;
+    }
+
+    .buttons button {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,403 @@
+/* 
+  General Settings for Body and Layout
+  -------------------------------------------------
+  Purpose:
+    - Sets the default margin, font family, background color, and flex layout.
+    - Centers the content both vertically and horizontally, and ensures RTL (Right-to-Left) alignment for Arabic text.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    /* Arabic-friendly font for the layout */
+    background-color: #f5f5f5;
+    /* Light gray background for the body */
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    height: 100vh;
+    /* Full viewport height */
+    direction: rtl;
+    /* Right-to-left text alignment */
+}
+
+/* 
+  Main Container for the Form
+  -------------------------------------------------
+  Purpose:
+    - Defines a centered container with padding, border radius, and shadow for visual appeal.
+    - Controls the width and overall look of the contact form container.
+*/
+
+.container {
+    text-align: center;
+    background-color: #f5f5f5;
+    /* White background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow around the container */
+    width: 400px;
+    /* Fixed width for the container */
+}
+
+/* 
+  Contact Form Section Styling
+  -------------------------------------------------
+  Purpose:
+    - Styles the form with padding, border radius, and text alignment.
+    - Adds shadow to the form for visual separation from the background.
+*/
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners for the form */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    text-align: center;
+}
+
+/* 
+  Logo Styling
+  -------------------------------------------------
+  Purpose:
+    - Adjusts the logo image size and margin for proper positioning.
+*/
+
+.logo img {
+    width: 40px;
+    /* Size of the logo */
+    height: auto;
+    margin-bottom: 10px;
+    /* Margin below the logo for spacing */
+}
+
+/* 
+  Header Styling (Heading)
+  -------------------------------------------------
+  Purpose:
+    - Adjusts font size and margin for the header to ensure clarity.
+    - Colors the text for better visibility.
+*/
+
+h6 {
+    font-size: 25px;
+    /* Font size of the header */
+    margin-bottom: 15px;
+    /* Space below the header */
+    color: #333;
+    /* Dark color for the text */
+}
+
+/* 
+  Form Group (Field Container)
+  -------------------------------------------------
+  Purpose:
+    - Adds spacing between each form field and aligns labels and inputs correctly.
+*/
+
+.form-group {
+    margin-bottom: 25px;
+    /* Space between fields */
+    text-align: right;
+    /* Right-align labels and inputs for RTL text */
+}
+
+/* 
+  Label Styling
+  -------------------------------------------------
+  Purpose:
+    - Makes labels bold and adjusts font size for readability.
+*/
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* Space between label and input */
+    font-weight: bold;
+    font-size: 12px;
+    /* Font size for labels */
+    color: #333;
+    /* Dark text color for labels */
+}
+
+/* 
+  Input and Textarea Field Styling
+  -------------------------------------------------
+  Purpose:
+    - Defines the appearance of text inputs and textareas.
+    - Uses CSS variables for customizable padding, border radius, and font size.
+*/
+
+input[type="text"],
+textarea {
+    width: 100%;
+    /* Full width for the inputs */
+    padding: var(--input-padding, 12px);
+    /* Customizable padding */
+    border: 1px solid #9e9898;
+    /* Light gray border */
+    border-radius: var(--field-border-radius, 5px);
+    /* Rounded corners with customizable radius */
+    font-size: var(--input-font-size, 14px);
+    /* Customizable font size */
+    outline: none;
+    /* Removes default input outline */
+}
+
+/* 
+  Textarea Specific Styling
+  -------------------------------------------------
+  Purpose:
+    - Adjusts the size and prevents resizing of the textarea.
+*/
+
+textarea {
+    resize: none;
+    /* Prevent textarea resizing */
+    height: var(--textarea-height, 80px);
+    /* Customizable height */
+}
+
+/* 
+  File Upload Section
+  -------------------------------------------------
+  Purpose:
+    - Styles the file upload button, including hover effects.
+    - Positions the hidden file input within the button area.
+*/
+
+.file-upload {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd;
+    /* Border around the file upload */
+    border-radius: var(--button-border-radius, 8px);
+    /* Rounded button */
+    padding: 10px;
+    background-color: #f9f9f9;
+    /* Light background color */
+    text-align: center;
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 14px;
+    color: #666;
+    /* Light gray text */
+    transition: all 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.file-upload:hover {
+    background-color: #e6e6e6;
+    /* Darker background on hover */
+    border-color: #ccc;
+    /* Darker border on hover */
+}
+
+/* 
+  Hidden File Input
+  -------------------------------------------------
+  Purpose:
+    - Hides the default file input while keeping its functionality.
+    - Makes it clickable within the file upload button.
+*/
+
+.file-upload input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    /* Makes file input invisible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Covers the entire button */
+    height: 100%;
+    cursor: pointer;
+}
+
+/* 
+  File Icon Styling
+  -------------------------------------------------
+  Purpose:
+    - Adjusts the file icon size and color within the upload button.
+*/
+
+.file-upload i {
+    margin-right: 8px;
+    /* Spacing between icon and text */
+    font-size: 16px;
+    /* Icon size */
+    color: #333;
+    /* Dark color for the icon */
+}
+
+/* 
+  Form Input Styling for Form Container
+  -------------------------------------------------
+  Purpose:
+    - Adjusts width, padding, border, and font size for form input fields.
+    - Adds top margin for spacing between the fields.
+*/
+
+.form-container input {
+    width: 350px;
+    /* Fixed width for input fields */
+    padding: 10px;
+    border: 1px solid #ddd;
+    /* Light gray border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Standard font size */
+    margin-top: 5px;
+    /* Margin on top of the field */
+}
+
+/* 
+  Button Styling
+  -------------------------------------------------
+  Purpose:
+    - Defines the button appearance with a red background and white text.
+    - Adds hover effect for visual interaction.
+*/
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    /* Space out the buttons */
+}
+
+.buttons button {
+    background-color: #B10000;
+    /* Red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size for the button text */
+    transition: background-color 0.3s;
+    /* Smooth background color change on hover */
+}
+
+.buttons button:hover {
+    background-color: #B10000;
+    /* Keep red background on hover */
+}
+
+
+/* Responsive Design for Smaller Screens */
+
+/* For Tablets and Smaller Screens (max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+      width: 90%;
+      /* Reduced width for the container on tablets */
+  }
+
+  .contact-form {
+      padding: 15px;
+  }
+
+  .form-container input {
+      width: 100%;
+      /* Inputs take full width on tablets */
+  }
+
+  .file-upload {
+      width: 100%;
+      padding: 15px;
+      /* Adjust the file upload button width */
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 10px;
+      /* Stack buttons vertically */
+  }
+
+  .buttons button {
+      width: 100%;
+      /* Buttons take full width on smaller devices */
+  }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      /* More space for the container on mobile */
+      padding: 15px;
+  }
+
+  .logo img {
+      width: 30px;
+      /* Adjust logo size */
+  }
+
+  h6 {
+      font-size: 22px;
+      /* Adjust header font size */
+  }
+
+  .form-group {
+      margin-bottom: 20px;
+  }
+
+  .form-container input {
+      width: 100%;
+      /* Inputs take full width on mobile */
+  }
+
+  .file-upload {
+      width: 100%;
+      padding: 12px;
+  }
+
+  .buttons button {
+      font-size: 14px;
+      /* Reduce font size on mobile */
+  }
+}
+
+/* For Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+      width: 90%;
+      /* Reduced container width on very small screens */
+      padding: 10px;
+  }
+
+  h6 {
+      font-size: 20px;
+      /* Further reduce header font size */
+  }
+
+  .form-group {
+      margin-bottom: 15px;
+  }
+
+  .form-container input {
+      width: 100%;
+      /* Full-width inputs on small devices */
+  }
+
+  .buttons button {
+      font-size: 14px;
+      padding: 8px 15px;
+      /* Adjust button size */
+  }
+
+  .file-upload {
+      padding: 10px;
+      width: 100%;
+      /* File upload button full-width */
+  }
+}

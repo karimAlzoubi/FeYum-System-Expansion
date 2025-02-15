@@ -1,0 +1,211 @@
+/* ===================================
+   General Page Settings
+   =================================== */
+   body {
+    font-family: 'Tajawal', sans-serif;
+    /* Use 'Tajawal' font for Arabic text */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    background-color: #F5F5F5;
+    /* Set light background color */
+    display: flex;
+    /* Use Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    direction: rtl;
+    /* Right-to-left text alignment */
+  }
+  
+  /* ===================================
+     Login Container
+     =================================== */
+  .login-container {
+    width: 100%;
+    /* Full width of container */
+    max-width: 400px;
+    /* Maximum width for responsiveness */
+    padding: 20px;
+    /* Padding inside the container */
+    background: #ffffff;
+    /* White background */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Light shadow for depth */
+    text-align: center;
+    /* Center text inside the container */
+  }
+  
+  /* Logo styling */
+  .logo img {
+    width: 50px;
+    /* Set logo width */
+    margin-bottom: 20px;
+    /* Space below logo */
+  }
+  
+  /* Login form label styling */
+  .login-form label {
+    display: block;
+    /* Block display for labels */
+    margin-bottom: 5px;
+    /* Space below labels */
+    font-weight: bold;
+    /* Bold text for labels */
+    text-align: right;
+    /* Right-align labels */
+  }
+  
+  /* Input field styling */
+  .login-form input {
+    width: 100%;
+    /* Full width of input */
+    padding: 10px;
+    /* Padding inside input fields */
+    margin-bottom: 15px;
+    /* Space below input fields */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners for input fields */
+    box-sizing: border-box;
+    /* Include padding and border in total width */
+  }
+  
+  /* Login button styling */
+  .login-button {
+    font-family: 'Tajawal', sans-serif;
+    /* Use 'Tajawal' font for button */
+    width: 100%;
+    /* Full width for the button */
+    padding: 10px;
+    /* Padding inside the button */
+    background-color: #B10000;
+    /* Red background */
+    color: white;
+    /* White text */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Set font size */
+  }
+  
+  /* Hover effect for login button */
+  .login-button:hover {
+    background-color: #B10000;
+    /* Keep red background on hover */
+  }
+  
+  /* Links section below the form */
+  .links {
+    margin-top: 10px;
+    /* Margin above links */
+  }
+  
+  /* Link styling */
+  .links a {
+    color: #B10000;
+    /* Red color for links */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 14px;
+    /* Set font size */
+    margin: 5px;
+    /* Space between links */
+  }
+  
+  /* Hover effect for links */
+  .links a:hover {
+    text-decoration: underline;
+    /* Underline links on hover */
+  }
+
+  /* ========================================================
+   Responsive Design for Different Screen Sizes
+======================================================== */
+
+/* Tablet Screens (768px to 1024px) */
+@media (max-width: 1024px) {
+  .login-container {
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  .login-button {
+    font-size: 15px;
+  }
+
+  .links a {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Screens (480px to 768px) */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%;
+    /* Allow the container to take 90% of the screen width */
+    padding: 15px;
+  }
+
+  .login-button {
+    font-size: 14px;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 40px;
+    /* Smaller logo for mobile */
+  }
+}
+
+/* Small Mobile Screens (less than 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .login-container {
+    max-width: 100%;
+    /* Full width for the container */
+    padding: 10px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 12px;
+    /* Slightly bigger padding for smaller screens */
+  }
+
+  .links a {
+    font-size: 11px;
+  }
+
+  .logo img {
+    width: 35px;
+    /* Even smaller logo */
+  }
+}
+
+.error-message {
+  color: #ff0000;
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+}

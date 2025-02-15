@@ -1,0 +1,117 @@
+/* box.css */
+
+/* Modal Overlay */
+.modal {
+    /* Initially hide the modal */
+    display: none;
+    /* Fix the modal position relative to the viewport */
+    position: fixed;
+    /* Ensure the modal appears above other elements */
+    z-index: 1000;
+    /* Position the modal at the top-left corner */
+    left: 0;
+    top: 0;
+    /* Make the modal cover the entire viewport */
+    width: 100%;
+    height: 100%;
+    /* Semi-transparent black background */
+    background-color: rgba(0,0,0,0.5);
+    /* Set the font family */
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* Modal Content Box */
+.modal-content {
+    /* White background for the content box */
+    background-color: white;
+    /* Center the modal content vertically with top margin */
+    margin: 15% auto;
+    /* Padding inside the content box */
+    padding: 20px;
+    /* Rounded corners */
+    border-radius: 8px;
+    /* Set the width to 80% of the viewport */
+    width: 80%;
+    /* Maximum width to prevent excessive stretching */
+    max-width: 500px;
+    /* Center-align the text */
+    text-align: center;
+}
+
+/* Success Icon */
+.success-icon {
+    /* Green color for the success icon */
+    color: #28a745;
+    /* Large font size for prominence */
+    font-size: 48px;
+    /* Space below the icon */
+    margin-bottom: 20px;
+}
+
+/* Modal Heading */
+.modal h3 {
+    /* Black text color */
+    color: #000;
+    /* Set the font family */
+    font-family: 'Tajawal', sans-serif;
+    /* Font size for the heading */
+    font-size: 24px;
+    /* Space below the heading */
+    margin-bottom: 15px;
+}
+
+/* Modal Paragraph */
+.modal p {
+    /* Black text color */
+    color: #000;
+    /* Set the font family */
+    font-family: 'Tajawal', sans-serif;
+    /* Font size for the paragraph */
+    font-size: 16px;
+    /* Space below the paragraph */
+    margin-bottom: 20px;
+}
+
+/* Bold Text within Modal */
+.modal strong {
+    /* Black text color */
+    color: #000;
+    /* Bold font weight */
+    font-weight: bold;
+}
+
+/* Submit Button within Modal */
+.modal .submit-btn {
+    /* Red background color */
+    background-color: #dc3545;
+    /* White text color */
+    color: white;
+    /* Remove default border */
+    border: none;
+    /* Padding inside the button */
+    padding: 10px 20px;
+    /* Rounded corners */
+    border-radius: 5px;
+    /* Pointer cursor on hover */
+    cursor: pointer;
+    /* Set the font family */
+    font-family: 'Tajawal', sans-serif;
+    /* Font size for the button text */
+    font-size: 16px;
+    /* Bold font weight */
+    font-weight: bold;
+    /* Set a fixed width */
+    width: 200px;
+    /* Center the button with vertical margins */
+    margin: 10px auto;
+    /* Block display to center the button */
+    display: block;
+    /* Smooth transition for background color changes */
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+.modal .submit-btn:hover {
+    /* Darken the background color on hover */
+    background-color: #c82333;
+}

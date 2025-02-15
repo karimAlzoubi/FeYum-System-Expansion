@@ -1,0 +1,293 @@
+/* ===================================
+   General Page Settings
+   =================================== */
+   body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    direction: rtl;
+    height: 100vh;
+}
+
+.container {
+    background-color: #f5f5f5;
+    display: flex;
+    width: 100%;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 220px; /* عرض الشريط الجانبي */
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* شعار الشريط الجانبي */
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ======== Dropdown Menu ======== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #B10000;
+  /* Red background */
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+  background-color: #B10000;
+  /* Red background on hover */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* Shadow for dropdown */
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #B10000;
+  color: white;
+}
+
+.dropdown-content a.active {
+  background-color: #B10000;
+  /* Highlight active link */
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  /* Show dropdown content on hover */
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    margin-right: 280px; /* يطابق عرض الشريط الجانبي */
+    width: calc(100% - 300px);
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 80vh; /* يجعل المحتوى يأخذ 80% من ارتفاع الشاشة */
+    display: flex; /* لتنظيم المحتوى الداخلي */
+    flex-direction: column; /* ترتيب المحتوى بشكل عمودي */
+    justify-content: center; /* توسيط المحتوى عمودياً */
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center; /* توسيط العنوان */
+}
+
+/* إذا كنت تريد تحكم أفضل في المساحة العلوية يمكنك إضافة */
+header {
+    margin-top: 30px; /* مساحة إضافية فوق العنوان */
+    margin-bottom: 30px; /* مساحة إضافية تحت العنوان */
+}
+
+
+.action-buttons {
+  display: flex; /* استخدام Flexbox لترتيب الأزرار والنصوص */
+  flex-direction: row-reverse; /* يجعل الأزرار على اليسار والنصوص على اليمين */
+  align-items: center; /* محاذاة العناصر عموديًا */
+  justify-content: flex-start; /* يجعل الأزرار مرصوصة بالعرض */
+  gap: 10px; /* مسافة بين الأزرار */
+}
+
+.action-buttons button {
+  background-color: #B10000;
+  color: #fff;
+  width: auto; /* السماح بزر بحجم تلقائي حسب المحتوى */
+  height: auto; /* السماح بارتفاع تلقائي */
+  padding: 10px 15px; /* تعديل الحشوة لتتناسب مع الشكل الجديد */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px; /* حجم الخط داخل الأزرار */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.action-buttons button:hover {
+  background-color: #900000; /* لون عند التمرير */
+}
+
+.action-buttons span {
+  color: #333;
+  font-size: 16px;
+  margin-left: 10px; /* إضافة مسافة بين النص والأزرار */
+  text-align: right; /* النصوص على اليمين */
+}
+
+/* نموذج الموظف */
+.employee-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    pointer-events: none; /* جعل الحقول غير قابلة للتعديل */
+}
+
+
+/* ========================================================
+   Responsive Design for Different Screen Sizes
+======================================================== */
+
+/* Tablet Screens (768px to 1024px) */
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      position: relative;
+      height: auto;
+      box-shadow: none;
+      padding: 15px;
+  }
+
+  .main-content {
+      margin-right: 0;
+      width: 100%;
+      padding: 15px;
+  }
+
+  .action-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .employee-form {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .form-group input {
+      font-size: 14px;
+  }
+}
+
+/* Mobile Screens (480px to 768px) */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      position: relative;
+      height: auto;
+      box-shadow: none;
+      padding: 10px;
+      display: none; /* Hide sidebar on mobile */
+  }
+
+  .main-content {
+      margin-right: 0;
+      width: 100%;
+      padding: 15px;
+      display: block;
+  }
+
+  header h1 {
+      font-size: 20px;
+  }
+
+  .action-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .employee-form {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .form-group input {
+      font-size: 14px;
+  }
+
+  .action-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 16px;
+  }
+}
+
+/* Small Mobile Screens (less than 480px) */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 18px;
+  }
+
+  .employee-form {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .form-group input {
+      font-size: 12px;
+  }
+
+  .action-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+  }
+}
